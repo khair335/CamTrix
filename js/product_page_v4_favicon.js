@@ -11,7 +11,9 @@ window.addEventListener('load', () => {
 				}
 			} else {
 				const hiddenColor = favicon_vars.faviconColor;
-				faviconMeta.setAttribute('content', hiddenColor);
+				if (faviconMeta) {
+					faviconMeta.setAttribute('content', hiddenColor);
+				}
 			}
 		});
 	});

@@ -3,7 +3,6 @@ class CcDate {
         this.locale = locale;
 
         if (!this.toLocaleDateStringSupportsLocales()) {
-            console.log("%cDates: %cBrowser does not support international locales", "color:red;font-weight:bold;", "color:initial;font-weight:initial;");
             this.locale = 'en-US';
         }
     }

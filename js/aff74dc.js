@@ -43,7 +43,7 @@ function addAffParamToCtaLinks() {
 	});
 }
 document.addEventListener('DOMContentLoaded', () => {
-	
+
 	const currentAffCookie = cc_aff_getCookie('affiliate_tag');
 	const info = window.info || {}; // Ensure 'info' is defined
 	const { direct, productPack } = info;
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		cc_hour_setCookie('entrypoint_url', window.entry_url, 25 / 60);
 	}
 
-	console.log('Entry URL: ', window.entry_url);
+
 
 	let aff = params.get('aff');
 
@@ -79,5 +79,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	addAffParamToCtaLinks();
 
-	console.log('Affiliate: ', window.affiliate);
+
 });

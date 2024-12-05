@@ -43,7 +43,7 @@ const innerStars = Array.from(starsSelect.children)
 let clicked = -1
 
 function resetStars() {
-	console.log('called')
+
 	innerStars.forEach((s, i) => {
 		s.src = s.src.replace('error-star', 'empty-star')
 	})
@@ -130,7 +130,7 @@ form.addEventListener('submit', (e) => {
 				return item.value.length == 0
 			})
 			.forEach((error) => {
-				console.log(error)
+
 				error.setAttribute('error', true)
 			})
 	} else {
