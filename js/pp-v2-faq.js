@@ -37,13 +37,14 @@ function faqCollapseHandler() {
 }
 
 //add screen reader friendly <a> tag descriptions
-
-const tags = FAQList.querySelectorAll('a');
-tags.forEach((tag) => {
-	const span = document.createElement('span');
-	span.classList.add('screen-reader-text');
-	span.innerText = 'customers support';
-	tag.appendChild(span);
-});
+if (FAQList) {
+	const tags = FAQList.querySelectorAll('a');
+	tags.forEach((tag) => {
+		const span = document.createElement('span');
+		span.classList.add('screen-reader-text');
+		span.innerText = 'customers support';
+		tag.appendChild(span);
+	});
+}
 
 faqCollapseHandler();

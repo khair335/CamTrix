@@ -2,6 +2,8 @@ const competitorsTableHead = document.querySelectorAll('.table-head');
 const competitorsTableBody = document.querySelectorAll('.table-body .table-column');
 
 function trackTableSizes() {
+	if (!competitorsTableHead[0]) return;
+
 	Array.from(competitorsTableHead[0].children).forEach((tableHead, index) => {
 		const rowNumber = tableHead.getAttribute('data-row');
 		const rowHeight = tableHead.offsetHeight;
@@ -18,7 +20,7 @@ function trackTableSizes() {
 	});
 }
 
-if (competitorsTableHead && competitorsTableBody) {
+if (competitorsTableHead?.length && competitorsTableBody?.length) {
 	trackTableSizes();
 	window.addEventListener('resize', () => {
 		trackTableSizes();

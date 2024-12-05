@@ -39,26 +39,18 @@ const observer = new IntersectionObserver(stickyBar, {
 	threshold: 0,
 });
 
-if (list) {
-	observer.observe(list);
-}
+observer.observe(list);
 
 window.addEventListener('mousemove', function () {
-	if (list) {
-		observer.disconnect();
-		observer.observe(list);
-	}
+	observer.disconnect(list);
+	observer.observe(list);
 });
 
 window.addEventListener('resize', function () {
-	if (list) {
-		observer.disconnect();
-		observer.observe(list);
-	}
+	observer.disconnect(list);
+	observer.observe(list);
 });
 window.addEventListener('scroll', function () {
-	if (list) {
-		observer.disconnect();
-		observer.observe(list);
-	}
+	observer.disconnect(list);
+	observer.observe(list);
 });
