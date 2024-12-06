@@ -7645,7 +7645,9 @@ aside {
     margin-top: 10px;
     margin-left: 15%;
   }
-
+strong a{
+  font-size: 16.45px;
+}
   .reply-area table,
   .subcomment {
     margin-left: 15%;

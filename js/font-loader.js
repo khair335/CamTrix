@@ -15,5 +15,5 @@ WebFont.load({
 	custom: {
 		families: ['Roboto', 'Poppins', 'Inter'],
 	},
-	timeout: 10000,
+	timeout: 500,
 });
